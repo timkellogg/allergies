@@ -1,1 +1,8 @@
-<%= @output %>
+<h2 class="text-center">Your allergies are</h2>
+<ul style="padding: 0" class="text-center">
+  <% @output.each do |allergy| %>
+    <li class="list-unstyled"><%= allergy %></li>
+  <% end %>
+</ul>
+<br>
+<a class="text-center" href="/">Back</a>

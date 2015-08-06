@@ -16,6 +16,11 @@ class Fixnum
         allergies.push(allergies_values[score])
       end
     end
+
+    if allergies == []
+      allergies.push('None')
+    end
+
     allergies
   end
 

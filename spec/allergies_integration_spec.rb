@@ -7,6 +7,7 @@ describe('using the allergy lookup method', {:type => :feature}) do
     visit('/')
     fill_in('allergy_score', :with => 3)
     click_button('Submit')
-    expect(page).to have_content('You are allergic to eggs and peanuts')
+    expect(page).to have_content('eggs')
+    expect(page).to have_content('peanuts')
   end
 end

@@ -1,13 +1,17 @@
-<h2>What is your allergy score?</h2>
+<div class="row">
+  <h2 class="text-center">What is your allergy score?</h2>
+</div>
 
 <form action="/allergies">
 
-  <label for="allergy_score">Enter your allergy score</label>
-  <input type="text" name="allergy_score" readonly style="border:0; color:#f6931f; font-weight:bold;" id="allergy_score">
+  <div style="width: 80%;" class="form-group">
+    <label for="allergy_score">Enter your allergy score</label>
+    <input type="text" name="allergy_score" class="form-control" style="border:0; color:#f6931f; font-weight:bold;" id="allergy_score">
 
-  <div id="slider"></div>
+    <div id="slider"></div>
+  </div>
 
-  <button type='submit'>Submit</button>
+  <button class="btn btn-primary" type='submit'>Submit</button>
 </form>
 
 
