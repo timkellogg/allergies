@@ -3,7 +3,26 @@
 <form action="/allergies">
 
   <label for="allergy_score">Enter your allergy score</label>
-  <input type="text" name="allergy_score">
+  <input type="text" name="allergy_score" readonly style="border:0; color:#f6931f; font-weight:bold;" id="allergy_score">
+
+  <div id="slider"></div>
 
   <button type='submit'>Submit</button>
 </form>
+
+
+<script>
+  $(document).ready(function() {
+
+    $('#slider').slider( {
+      value: 0,
+      min: 0,
+      max: 255,
+      step: 1,
+      slide: function(event, ui) {
+        $("#allergy_score").val(ui.value);
+      }
+    });
+    $("#allergy_score").val( $("#slider").slider("value"));
+  });
+</script>
